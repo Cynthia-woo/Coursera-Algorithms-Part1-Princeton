@@ -20,7 +20,7 @@ public class PercolationStats {
         experiments = trials;
         tests = new double[experiments];
         for (int t = 0; t < experiments; t++) {
-            int numOfOpens = 0;
+            int numOfOpens;
             Percolation pc = new Percolation(n);
             while (!pc.percolates()) {
                 int i = StdRandom.uniformInt(1, n + 1);
