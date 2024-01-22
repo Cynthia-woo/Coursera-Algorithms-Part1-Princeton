@@ -1,0 +1,30 @@
+Question 3
+Dutch national flag.
+
+Given an array of n buckets, each containing a red, white, or blue
+pebble, sort them by color. The allowed operations are:
+
+swap(i,j): swap the pebble in bucket i with the pebble in bucket j.
+color(i): color of pebble in bucket i.
+The performance requirements are as follows:
+At most n calls to color().
+At most n calls to swap().
+Constant extra space.
+
+QuickSort 3 way
+red in the left
+blue in the right
+white in the mid
+
+int red = 0;
+int blue = arr.length - q;
+int i = 0;
+while ( i <= blue) {
+    if (arr[i] == "r") {swap(i, red++);}
+    else if (arr[i] == "b") {swap(i, blue--);}
+    else i++;
+}
+
+
+
+
